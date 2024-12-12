@@ -3,25 +3,20 @@ import {
     IconButton,
     List,
     ListItem,
-    ListItemPrefix,
     Drawer,
     Card,
 } from "@material-tailwind/react";
-import {
-    PowerIcon,
-} from "@heroicons/react/24/solid";
 import {
     Bars3Icon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {Link} from "react-router-dom";
 import {useAuth} from "../../context/AuthContext.jsx";
-import AuthLink from "./AuthLink.jsx";
 import AuthSidebar from "./AuthSidebar.jsx";
 
 export function Sidebar() {
     const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
-    const {isAuthenticated, user} = useAuth();
+    const {isAuthenticated} = useAuth();
 
     const openDrawer = () => setIsDrawerOpen(true);
     const closeDrawer = () => setIsDrawerOpen(false);
@@ -43,7 +38,7 @@ export function Sidebar() {
                 >
                     <div className="mb-2 flex justify-center items-center gap-4 p-4 rounded-lg">
                         <img className={'w-16 h-16'}
-                             src="../../public/images/logo.jpeg"
+                             src="https://res.cloudinary.com/dmmlxlio3/image/upload/v1734040288/kkh7z3uvzfpota73pniw.jpg"
                              alt="No se encontro la imagen"/>
 
                     </div>
