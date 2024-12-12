@@ -2,10 +2,11 @@ import {useAuth} from "../../context/AuthContext.jsx";
 import {Link} from "react-router-dom";
 
 function AuthLink() {
-    const {isAuthenticated, logout} = useAuth();
+    const {isAuthenticated, user} = useAuth();
 
+    console.log(user);
     if (isAuthenticated)
-        return <Link to={'/logout'} onClick={() => { logout() }}>Cerrar sesión</Link>
+        return <h1>{user.username}</h1>
     return (
         <>
             <Link to={'/login'} className={'hover:bg-blue-900 p-3 hover:rounded-lg'}>
