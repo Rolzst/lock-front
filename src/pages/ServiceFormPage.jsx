@@ -54,7 +54,7 @@ function ServiceFormPage() {
                     </label>
                     <input type="nom_servicio"
                            className='w-full px-4 py-2 rounded-md my-2 text-black'
-                           placeholder='Password'
+                           placeholder='Nombre del servicio'
                            {
                                ...register("nom_servicio", {required: true})
                            }   />
