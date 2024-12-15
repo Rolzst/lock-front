@@ -10,7 +10,7 @@ function ServicesPage() {
 
     useEffect(() => {
         getServicios();
-    }, []);
+    }, [servicios]);
 
     return (
         <div className={'p-7'}>
