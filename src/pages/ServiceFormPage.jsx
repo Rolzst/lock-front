@@ -151,7 +151,15 @@ function ServiceFormPage() {
 
         {/* Botón de Crear */}
         <div className={"flex justify-end items-center"}>
-          <button type="submit" className={"bg-blue-900 p-2 rounded-lg text-white"} disabled={isCompromised}>
+          <button
+            type="submit"
+            className={
+              `p-2 rounded-lg text-white ${isCompromised || checkingCompromise 
+                ? "bg-gray-400 cursor-not-allowed" 
+                : "bg-blue-900 hover:bg-blue-700"}`
+            }
+            disabled={isCompromised || checkingCompromise}
+          >
             Crear
           </button>
         </div>
